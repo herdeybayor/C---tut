@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 
+void print_array(std::vector<std::string>);
+
 int main()
 {
 	int choice;
@@ -9,10 +11,7 @@ int main()
 
 	do
 	{
-		for (int i = 0; i < menu.size(); i++)
-		{
-			std::cout << menu[i] << std::endl;
-		}
+		print_array(menu);
 
 		std::cin >> choice;
 
@@ -43,4 +42,12 @@ int main()
 	} while (choice != 0);
 
 	return (0);
+}
+
+void print_array(std::vector<std::string> array)
+{
+	for (int i = 0; i < array.size(); i++)
+	{
+		std::cout << array[i] << std::endl;
+	}
 }
